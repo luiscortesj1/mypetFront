@@ -12,6 +12,10 @@ const controller={
     registro: (req,res) => {
         
         return res.render(path.join(__dirname,'../views/users/register'));
+    },
+    detalle:(req,res)=>{
+        return res.render('detalleProducto.ejs')
+    
     }
 
 }
