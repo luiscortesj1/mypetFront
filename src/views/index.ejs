@@ -27,65 +27,54 @@
     <div class="p-2 bd-highlight text-center"><a href="#" class="text-decoration-none text-reset"><img src="../images/categorias/categoria_accesorios.png"class="img-fluid rounded-circle"><h3>Accesorios</h3></a></div> 
   </div>
 
-  <%- include('./carousel/carousel')%>
-  <div class="row row-cols-1 row-cols-md-4 g-4 px-5 mt-5 ">
+  <h2 class="text-center mt-5">Nuevos Productos</h2>
+  <div class="row row-cols-1 row-cols-md-4 g-4 px-5 mt-2 mb-3 ">
+    <% for( let i = 0; i < products.length; i++ ){%>
     <div class="col">
+      
       <div class="card h-100" >
-        <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto" style="width:50%" alt="...">
+        <img src="../images/products/<%= products[i].image%>" class="card-img-top mx-auto mt-3" style="width:50%" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">DOG CHOW</h5>
-          <h5 class="card-title text-center">$15.200</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title text-center"><%=products[i].name%></h5>
+          <h5 class="card-title text-center">$<%=products[i].price%></h5>
+          
+          <div class="position-absolute top-100 start-50 translate-middle"> <a href="/producto/detalle/<%=products[i].id%>"><small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small></a></div>
+        
         </div>
-        <div class="card-footer position-absolute top-0 start-50 translate-middle-x">
-          <a href="/producto/detalle"><small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small></a>
-        </div>
+        
       </div>
     </div>
+    <% } %>
+    
+    
+  
+  </div>
+  <h2 class="text-center mt-5">KONG</h2>
+  <div class="row row-cols-1 row-cols-md-4 g-4 px-5 mt-2 mb-3 ">
+    <% for( let i = 0; i < brand.length; i++ ){%>
     <div class="col">
+      
       <div class="card h-100" >
-        <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto" style="width:50%" alt="...">
+        <img src="../images/products/<%= brand[i].image%>" class="card-img-top mx-auto mt-3" style="width:50%" alt="...">
         <div class="card-body">
-          <h5 class="card-title text-center">DOG CHOW</h5>
-          <h5 class="card-title text-center">$15.200</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title text-center"><%=brand[i].name%></h5>
+          <h5 class="card-title text-center">$<%=brand[i].price%></h5>
+          
+          <div class="position-absolute top-100 start-50 translate-middle"> <a href="/producto/detalle/<%=brand[i].id%>"><small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small></a></div>
+        
         </div>
-        <div class="card-footer position-absolute top-0 start-50 translate-middle-x">
-          <a href="/producto/detalle"><small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small></a>
-        </div>
-      </div>
-    </div><div class="col">
-      <div class="card h-100" >
-        <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto" style="width:50%" alt="...">
-        <div class="card-body">
-          <h5 class="card-title text-center">DOG CHOW</h5>
-          <h5 class="card-title text-center">$15.200</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer position-absolute top-0 start-50 translate-middle-x">
-          <small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small>
-        </div>
-      </div>
-    </div><div class="col">
-      <div class="card h-100" >
-        <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto" style="width:50%" alt="...">
-        <div class="card-body">
-          <h5 class="card-title text-center">DOG CHOW</h5>
-          <h5 class="card-title text-center">$15.200</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer position-absolute top-0 start-50 translate-middle-x ">
-          <small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small>
-        </div>
+        
       </div>
     </div>
+    <% } %>
+    
     
   
   </div>
 
   <div class="container mb-2">
     <div class="card-body">
-      <h5 class="card-title text-center">Noticias</h5>
+      <h5 class="card-title text-center"></h5>
       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
       <div class="row row-cols-1 row-cols-md-4 g-4 mt-1">
         <div class="col">

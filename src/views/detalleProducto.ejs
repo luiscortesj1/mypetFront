@@ -10,14 +10,13 @@
         
         <div class="d-flex flex-row bd-highlight mb-3 d-flex justify-content-center mt-5">
             <div class="images " style="width: 50%;">
-        <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto " style="width:30%" alt="...">
-        <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto " style="width:30%" alt="...">
-        <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto " style="width:30%" alt="...">
+        <img src="/images/products/<%=product.image%>" class="card-img-top mx-auto " style="width:70%" alt="...">
+        
          </div>
          <div class="" style="width:50%;">
-          <h2 class="card-title ">Comida para perros - Adultos</h2>
-          <h3 class="fst-italic fs-4" ">Marca: Dog Chow </h3>
-          <h3 class="text-center">$15.000</h3>
+          <h2 class="card-title "><%=product.name%></h2>
+          <h3 class="fst-italic fs-4" ">Marca:<%=product.category%></h3>
+          <h3 class="text-center">$<%=product.price%></h3>
          
             <div class="d-flex justify-content-center">
             <form action="" class="d-flex flex-column gap-2" >
@@ -29,14 +28,11 @@
 
             <ul class="nav nav-tabs mt-2">
             <li class="nav-item">
-              <a class="nav-link active text-dark" aria-current="page" href="#">Carateristicas</a>
+              <a class="nav-link active text-dark" aria-current="page" href="#">Descripción</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Descripción</a>
-            </li>
+            
           </ul>
-          <div class="border border-2 "><p>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit am lorem Some quick example text to build on the card title and make up the bulk of the card'
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed in cumque ratione autem! Repellat in deserun</p>
+          <div class="border border-2 "><p><%=product.description%></p>
         </div>
           
         </div>
@@ -48,58 +44,7 @@
 
          </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-4 g-4 px-5 mt-3 mb-2 ">
-            <div class="col">
-              <div class="card h-100" >
-                <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto" style="width:35%" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">DOG CHOW</h5>
-                  <h5 class="card-title text-center">$15.200</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer position-absolute top-0 start-50 translate-middle-x">
-                  <a href="/producto/detalle"><small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small></a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100" >
-                <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto" style="width:35%" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">DOG CHOW</h5>
-                  <h5 class="card-title text-center">$15.200</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer position-absolute top-0 start-50 translate-middle-x">
-                  <a href="/producto/detalle"><small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small></a>
-                </div>
-              </div>
-            </div><div class="col">
-              <div class="card h-100" >
-                <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto" style="width:35%" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">DOG CHOW</h5>
-                  <h5 class="card-title text-center">$15.200</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer position-absolute top-0 start-50 translate-middle-x">
-                  <small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small>
-                </div>
-              </div>
-            </div><div class="col">
-              <div class="card h-100" >
-                <img src="../images/Dog_Chow8.png" class="card-img-top mx-auto" style="width:35%" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">DOG CHOW</h5>
-                  <h5 class="card-title text-center">$15.200</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer position-absolute top-0 start-50 translate-middle-x ">
-                  <small class="text-muted"><button class="btn text-dark" style="background-color:#c8ee3d"><strong>Ver producto</strong></button></small>
-                </div>
-              </div>
-            </div>
-        </div>
+       
          <%- include('./partials/footer')%>
 
 </body>

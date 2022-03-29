@@ -1,20 +1,19 @@
 const path = require('path');
-
+const db = require('../database/models');
+const Sequelize=require('sequelize')
 const controller={
 
-    home: (req,res) => {
-        return res.render('index.ejs')
+    home: async(req,res) => {
+       const products= await db.Product.findAll({order:[['id','DESC']], limit:4})
+       const brand= await db.Product.findAll({limit:4, where: {idBrand:6}})
+       
+        return res.render('index.ejs',{products,brand})
     },
-    login: (req,res) => {
-        
-        return res.render(path.join(__dirname,'../views/users/login'));
-    },
-    registro: (req,res) => {
-        
-        return res.render(path.join(__dirname,'../views/users/register'));
-    },
-    detalle:(req,res)=>{
-        return res.render('detalleProducto.ejs')
+    detalle: async (req,res)=>{
+        const id = req.params.id
+        const product= await db.Product.findByPk(id)
+        console.log(product)
+        return res.render('detalleProducto.ejs',{product})
     
     }
 
